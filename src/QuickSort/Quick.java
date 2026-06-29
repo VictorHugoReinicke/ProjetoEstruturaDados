@@ -2,10 +2,15 @@ package QuickSort;
 
 public class Quick {
 
+	public static long comparacoes;
+	public static long trocas;
+
 	public static void quickSort(int[] array) {
 		if (array == null || array.length <= 1) {
 			return;
 		}
+		comparacoes = 0;
+		trocas = 0;
 		quickSortRec(array, 0, array.length - 1);
 	}
 
@@ -25,11 +30,15 @@ public class Quick {
 		while (true) {
 
 			while (array[i] < pivo) {
+				comparacoes++;
 				i++;
 			}
+			comparacoes++;
 			while (array[j] > pivo) {
+				comparacoes++;
 				j--;
 			}
+			comparacoes++;
 			if (i >= j) {
 				return j;
 			}
@@ -37,6 +46,7 @@ public class Quick {
 			int aux = array[i];
 			array[i] = array[j];
 			array[j] = aux;
+			trocas++;
 			i++;
 			j--;
 
