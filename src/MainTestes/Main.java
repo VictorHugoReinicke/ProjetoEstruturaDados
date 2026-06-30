@@ -41,7 +41,10 @@ public class Main {
 		long tempoBubble = fimBubble - inicioBubble;
 //		System.out.println("Ordenado:" + Arrays.toString(vetorBubble) + "\n");
 		System.out.println("Tempo do Bubble: " + tempoBubble + "ms \n");
-
+		System.out.println("Número de comparações: " + Bolha.comparacoes + " \n");
+		System.out.println("Número de trocas: "+ Bolha.trocas + "\n"); 
+		
+		
 		int[] vetorSelection = dadosOriginais.clone();
 		long inicioSelection = System.currentTimeMillis();
 		Selecao.selectionSort(vetorSelection);
@@ -49,6 +52,9 @@ public class Main {
 		long tempoSelection = fimSelection - inicioSelection;
 //		System.out.println("Selection sort " + Arrays.toString(vetorSelection) + "\n");
 		System.out.println("Tempo do Selection: " + tempoSelection + "ms \n");
+		System.out.println("Número de comparações: " + Selecao.comparacoes + " \n");
+		System.out.println("Número de trocas: "+ Selecao.trocas + "\n"); 
+		
 
 		int[] vetorInsertion = dadosOriginais.clone();
 		long inicioInsertion = System.currentTimeMillis();
@@ -57,6 +63,9 @@ public class Main {
 		long tempoInsertion = fimInsertion - inicioInsertion;
 //		System.out.println("Insertion sort " + Arrays.toString(vetorInsertion) + "\n");
 		System.out.println("Tempo do Insertion: " + tempoInsertion + "ms \n");
+		System.out.println("Número de comparações: " + Insertion.comparacoes + " \n");
+		System.out.println("Número de trocas: "+ Insertion.trocas + "\n"); 
+		
 		
 		int[] vetorQuick = dadosOriginais.clone();
 		long inicioQuick = System.currentTimeMillis();
@@ -65,6 +74,9 @@ public class Main {
 		long tempoQuick = fimQuick - inicioQuick;
 //		System.out.println("Quick sort "+ Arrays.toString(vetorQuick) + "\n");
 		System.out.println("Tempo do Quick: " + tempoQuick + "ms \n");
+		System.out.println("Número de comparações: " + Quick.comparacoes + " \n");
+		System.out.println("Número de trocas: "+ Quick.trocas + "\n"); 
+		
 		
 		int[] vetorMerge = dadosOriginais.clone();
 		long inicioMerge = System.currentTimeMillis();
@@ -73,6 +85,9 @@ public class Main {
 		long tempoMerge = fimMerge - inicioMerge;
 //		System.out.println("Merge sort "+ Arrays.toString(vetorMerge) + "\n");
 		System.out.println("Tempo do Merge: " + tempoMerge + "ms \n");
+		System.out.println("Número de comparações: " + MergeSort.comparacoes + " \n");
+		System.out.println("Número de trocas: "+ MergeSort.trocas + "\n"); 
+		
 	}
 
 }
