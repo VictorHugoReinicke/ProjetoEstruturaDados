@@ -1,6 +1,5 @@
 package MainTestes;
 
-import java.util.Arrays;
 
 import BubbleSort.Bolha;
 import InsertionSort.Insertion;
